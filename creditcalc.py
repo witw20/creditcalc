@@ -1,6 +1,6 @@
 import math, argparse
 
-def diff(prcpl, period, interest):
+def diff(prcpl, period, interest) -> None:
     pmt_sum = 0
     try:
         prcpl = float(prcpl)
@@ -19,9 +19,8 @@ def diff(prcpl, period, interest):
             print(f"\nOverpayment = {pmt_sum - prcpl}")
         else:
             print("Incorrect parameters")
-    return None
 
-def nper(prcpl, payment, interest):
+def nper(prcpl, payment, interest) -> None:
     try:
         prcpl = float(prcpl)
         payment = float(payment)
@@ -39,9 +38,8 @@ def nper(prcpl, payment, interest):
             print(f"\nOverpayment = {math.ceil(period * payment - prcpl)}")
         else:
             print("Incorrect parameters")
-    return None
 
-def cal_prcpl(payment, period, interest):
+def cal_prcpl(payment, period, interest) -> None:
     try:
         payment = float(payment)
         period = int(period)
@@ -56,9 +54,8 @@ def cal_prcpl(payment, period, interest):
             print(f"\nOverpayment = {period * payment - prcpl}")
         else:
             print("Incorrect parameters")
-    return None
 
-def pmt(prcpl, period, interest):
+def pmt(prcpl, period, interest) -> None:
     try:
         prcpl = float(prcpl)
         period = int(period)
@@ -71,7 +68,6 @@ def pmt(prcpl, period, interest):
             print(f"Your monthly payment = {math.ceil(payment)}!")
         else:
             print("Incorrect parameters")
-    return None
 
 def main():
     parser = argparse.ArgumentParser()
